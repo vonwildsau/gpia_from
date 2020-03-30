@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GPIA</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" rel="stylesheet">
+    <script language="JavaScript" src="js/myscript.js?n=1"></script>
+  </head>  
+  
+  <body>
+    
+    <div id="map-wrapper">
+      
+      <div class="title" id="allButton">Where we're from.</div>
+      
+      <div id="map"></div>
+      
+
+        <div class="box">
+            <section>
+              
+              <div id="dotBox">
+                <span class="dot" style="background-color: #b50231;"></span><br>
+                <span class="dot" style="background-color: #08782c;"></span><br>
+                <span class="dot" style="background-color: #242a8c;"></span><br>
+                <span class="dot" style="background-color: #ff9b05;"></span><br>
+              </div>
+              <div id="textBox">
+                <span class="legend" id="alumniButton">Alumni  2003 - 2019</span><br>
+                <span class="legend" id="ptFacultyButton">Part-Time Faculty</span><br>
+                <span class="legend" id="facultyButton">Faculty</span><br>
+                <span class="legend" id="scholarButton">Visiting Scholar(s)</span><br>
+              </div>
+             
+            </section>
+          
+        </div>
+      
+      
+      
+    </div>
+    
+    <script class="popup-template" type="x-tmpl-mustache">
+      <div style="font-family: 'titlefont'; margin-top: 15px; margin-right: 15px; color: black;">
+        
+        <div><b>{{count}}</b> {{type}} from <b>{{origincountry}}</b></div>
+   
+      </div>
+    </script>
+    
+    
+     <!-- Load Leaflet and Carto libraries -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://libs.cartocdn.com/carto.js/v4.1.11/carto.min.js"></script>
+    
+     <!-- import the Mustache library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
+     <script src="./script.js"></script>
+    
+    
+  </body>
+</html>
