@@ -3,8 +3,9 @@
 
 
 var map = L.map('map', {
-  center: [0.728709, 13.979167],
-  zoom: 2
+  center: [20.728709, 13.979167],
+  zoom: 2,
+  minZoom: 2,
 });
 
 // Get the popup template from the HTML. We can do this here because the template will never change.
@@ -13,7 +14,6 @@ var popupTemplate = document.querySelector('.popup-template').innerHTML;
 // Add base layer
 L.tileLayer('https://api.mapbox.com/styles/v1/nicostettler/ck67e1izr0apx1ipbuyp7bvm0/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoibmljb3N0ZXR0bGVyIiwiYSI6ImNqc3lweWFmOTE1cDc0OW9iZGYzbHNyNGoifQ.BgZ8GQky4xAHBlL-Pi8MiQ', {
   maxZoom: 18,
-  attribution: "&copy <a href=https://vonwildsau.com target='_blank'> vonwildsau</a>"
 }).addTo(map);
 
 var client = new carto.Client({
