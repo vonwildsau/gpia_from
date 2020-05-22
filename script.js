@@ -18,11 +18,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/nicostettler/ck67e1izr0apx1ipbuyp7
 
 var client = new carto.Client({
   apiKey: 'default_public',
-  username: 'vonwildsau'
+  username: 'intaffairs'
 });
 
 var source = new carto.source.Dataset('country_of_birth');
-var source = new carto.source.SQL("SELECT * FROM vonwildsau.country_of_birth");
+var source = new carto.source.SQL("SELECT * FROM country_of_birth");
 
 var style = new carto.style.CartoCSS(`
 #layer {
