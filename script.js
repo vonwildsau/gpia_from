@@ -57,7 +57,7 @@ var style = new carto.style.CartoCSS(`
 `);
 
 var layer = new carto.layer.Layer(source, style, {
-  featureClickColumns: ['origincountry', 'type', 'latitude', 'longitude', 'count']
+  featureClickColumns: ['origincoun', 'type', 'latitude', 'longitude', 'count']
 });
 
 layer.on('featureClicked', function (event) {
